@@ -8,13 +8,14 @@ export default async (solver, day, part, inputFile) => {
     })
     logger.debug(`Part ${part} input: `, input)
 
-    const solution = await solver(input).catch((error) => {
+    try {
+        const solution = solver(input)
+        logger.log(`_PART ${part}____`)
+
+        return solution
+    } catch (error) {
         logger.error(`Error solving part ${part}`)
 
         throw error
-    })
-
-    logger.log(`\n_PART ${part}____\n`)
-
-    return solution
+    }
 }

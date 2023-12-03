@@ -35,7 +35,7 @@ export const part1 = input => {
         }
     }
 
-    return Promise.resolve(result)
+    return result
 }
 
 const findMinimums = game => {
@@ -57,5 +57,5 @@ export const part2 = input => {
         result += red * green * blue
     }
 
-    return Promise.resolve(result)
+    return result
 }

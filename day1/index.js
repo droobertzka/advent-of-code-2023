@@ -11,7 +11,7 @@ export const part1 = (input) => {
         return acc + Number(first + last)
     }, 0)
 
-    return Promise.resolve(sum)
+    return sum
 }
 
 const strReverse = str => [...str].reverse().join('')
@@ -56,5 +56,5 @@ export const part2 = (input) => {
         return acc + Number(first + last)
     }, 0)
 
-    return Promise.resolve(sum)
+    return sum
 }
