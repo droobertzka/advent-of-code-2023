@@ -3,15 +3,15 @@ import process from 'node:process'
 const {LOG_LEVEL} = process.env
 
 export const debug = (...args) => {
-    if (LOG_LEVEL === 'debug') {
-        console.log.apply(console, args)
-    }
+	if (LOG_LEVEL === 'debug') {
+		console.log(...args)
+	}
 }
 
 export const log = (...args) => {
-    console.log.apply(console, args)
+	console.log(...args)
 }
 
 export const error = (...args) => {
-    console.error.apply(console, args)
+	console.error(...args)
 }

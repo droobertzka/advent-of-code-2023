@@ -1,11 +1,10 @@
 import path from 'node:path'
-import { readFile } from 'node:fs/promises'
-import { fileURLToPath } from 'url'
+import {readFile} from 'node:fs/promises'
+import {fileURLToPath} from 'node:url'
 import * as logger from './logger.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-
 
 /**
  * Takes a day number and a file name and returns the contents of the file
@@ -14,9 +13,9 @@ const __dirname = path.dirname(__filename)
  * @returns {Promise<String>}
  */
 export const readInput = async (day, inputFile) => {
-    const inputFilePath = `./day${day}/${inputFile}.txt`
-    const inputPath = path.resolve(__dirname, '../', inputFilePath)
-    logger.debug('Resolved input path: ', inputPath)
+	const inputFilePath = `./day${day}/${inputFile}.txt`
+	const inputPath = path.resolve(__dirname, '../', inputFilePath)
+	logger.debug('Resolved input path: ', inputPath)
 
-    return readFile(inputPath, {encoding: 'utf8'})
+	return readFile(inputPath, {encoding: 'utf8'})
 }

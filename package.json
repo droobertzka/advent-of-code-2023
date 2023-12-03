@@ -4,11 +4,25 @@
   "description": "JavaScript solutions to https://adventofcode.com/2023",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0 <21.0.0",
+    "npm": ">=10.1.0 <11.0.0"
+  },
   "scripts": {
     "day": "node ./index.js",
     "debug": "LOG_LEVEL=debug node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "xo": "^0.56.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-array-reduce": "off"
+    }
+  }
 }
