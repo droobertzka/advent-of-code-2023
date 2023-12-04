@@ -8,6 +8,12 @@ export const debug = (...args) => {
 	}
 }
 
+export const info = (...args) => {
+	if (LOG_LEVEL === 'info' || LOG_LEVEL === 'debug') {
+		console.info(...args)
+	}
+}
+
 export const log = (...args) => {
 	console.log(...args)
 }

@@ -10,7 +10,8 @@
   },
   "scripts": {
     "day": "node ./index.js",
-    "debug": "LOG_LEVEL=debug node ./index.js",
+    "debug": "LOG_LEVEL=info node ./index.js",
+    "superdebug": "LOG_LEVEL=debug node ./index.js",
     "scaffold": "./scaffold.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +23,7 @@
   "xo": {
     "semicolon": false,
     "rules": {
+      "capitalized-comments": "off",
       "unicorn/no-array-callback-reference": "off",
       "unicorn/no-array-reduce": "off"
     }
